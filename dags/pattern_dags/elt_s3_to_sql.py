@@ -65,7 +65,7 @@ def _parse_json(filepath):
     params={
         "coordinates": Param({"latitude": 46.9481, "longitude": 7.4474}, type="object")
     },  # Airflow params can add interactive options on manual runs. See: https://www.astronomer.io/docs/learn/airflow-params
-    template_searchpath=[_SQL_DIR],  # path to the SQL templates
+    template_searchpath=[str(_SQL_DIR)],  # path to the SQL templates
 )
 def elt_s3_to_sql():
 
