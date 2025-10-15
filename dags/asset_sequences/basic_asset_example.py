@@ -7,7 +7,7 @@ def my_asset_1():
 @asset(schedule=[my_asset_1], tags=["basic_asset_example"])
 def my_asset_2():
     # you can return data from an @asset decorated function
-    # to push it to XCom 
+    # to push it to XCom
     return {"a": 1, "b": 2}
 
 @asset(schedule=[my_asset_1, my_asset_2], tags=["basic_asset_example"])
